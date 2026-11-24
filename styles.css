@@ -57,18 +57,60 @@ nav { display: flex; gap: 1.35rem; }
 nav a { text-decoration: none; }
 nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 
+.home-page {
+  --home-paper: #fbfaf7;
+  --home-ink: #20192b;
+  --home-muted: #514d5d;
+  --home-accent: #5b3e92;
+  --home-border: #e5dfea;
+  min-height: 100svh;
+  background: var(--home-paper);
+  color: var(--home-ink);
+}
+
+.home-header {
+  padding-block: 0.65rem;
+  border-bottom: 1px solid var(--home-border);
+}
+
+.home-header .nav-link {
+  min-height: 2.75rem;
+  padding: 0.65rem clamp(0.55rem, 2vw, 1rem);
+  border-radius: 0.4rem;
+  color: var(--home-ink);
+  font-weight: 600;
+}
+
+.home-header .nav-link:hover,
+.home-header .nav-link:focus-visible {
+  background: #eee8f6;
+  color: var(--home-accent);
+}
+
+.home-header .nav-link:focus-visible {
+  outline-color: var(--home-accent);
+}
+
 .home {
   display: grid;
   flex: 1;
   align-content: center;
-  justify-items: start;
-  gap: 1.5rem;
-  padding-block: clamp(4rem, 11vw, 8rem);
+  padding-block: clamp(4.25rem, 11vw, 9rem);
 }
 
 .eyebrow {
-  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--home-accent);
   font-weight: 650;
+}
+
+.eyebrow::before {
+  width: 1.7rem;
+  height: 2px;
+  background: currentColor;
+  content: "";
 }
 
 h1, h2 {
@@ -78,12 +120,44 @@ h1, h2 {
   line-height: 1.02;
 }
 
-.home h1 { font-size: clamp(3.5rem, 11vw, 8rem); }
+.home h1 {
+  margin-block: 0.85rem 1.25rem;
+  font-size: clamp(3.25rem, 8.6vw, 7.6rem);
+}
 
 .home-intro {
-  max-width: 42ch;
-  color: var(--muted);
-  font-size: 1.125rem;
+  max-width: 37ch;
+  color: var(--home-muted);
+  font-size: clamp(1.125rem, 1.9vw, 1.4rem);
+  line-height: 1.45;
+}
+
+.home-footer {
+  padding-block: clamp(2.15rem, 5vw, 4.25rem);
+  background: #241a32;
+  color: #f4ecff;
+}
+
+.home-tagline {
+  font-family: Georgia, serif;
+  line-height: 1.05;
+}
+
+.home-tagline span,
+.home-tagline strong {
+  display: block;
+}
+
+.home-tagline span {
+  color: #efddff;
+  font-size: clamp(1.2rem, 3.8vw, 3rem);
+}
+
+.home-tagline strong {
+  color: #cfafff;
+  font-size: clamp(2.15rem, 8.6vw, 7rem);
+  font-weight: 400;
+  letter-spacing: -0.06em;
 }
 
 .button {
