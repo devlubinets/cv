@@ -5,20 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Curriculum vitae of Kyrylo Lubynets.">
   <title>CV | Kyrylo Lubynets</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.2/dist/css/bootstrap.min.css" integrity="sha384-MKn5NWVBEuQXJE7TSKSgPUmMiSCmVTfCsR+VSSeQpHnoyJQZZFn/kBn+Ht5jZDPQ" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles.css">
   <script src="./download-tracking.js" defer></script>
   <script src="./smartlook.js" defer></script>
 </head>
 <body>
-  <header class="site-header wrap">
-    <a class="wordmark" href="https://cv-links.s.gy/portfolio">Kyrylo Lubynets</a>
-    <nav aria-label="Main navigation">
-      <a href="https://cv-links.s.gy/d4yhix" aria-current="page">CV</a>
-      <a href="https://cv-links.s.gy/github">GitHub</a>
-    </nav>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav justify-content-center gap-1" aria-label="Main navigation">
+        <a class="nav-link" href="https://cv-links.s.gy/portfolio">Home</a>
+        <a class="nav-link" href="https://cv-links.s.gy/d4yhix" aria-current="page">CV</a>
+        <a class="nav-link" href="https://cv-links.s.gy/github">GitHub</a>
+        <a class="nav-link" href="https://cv-links.s.gy/linkedin">LinkedIn</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="cv wrap">
+  <main class="cv container">
     <div class="cv-heading">
       <h1>Curriculum vitae</h1>
       <a class="button" href="./kyrylo-lubynets-cv.pdf" download data-tracking-url="https://cv-links.s.gy/pdf">Download PDF</a>
@@ -108,8 +112,13 @@
     </article>
   </main>
 
-  <footer class="site-footer wrap">
-    <a href="https://cv-links.s.gy/github">@devlubinets</a>
+  <footer class="site-footer">
+    <div class="container">
+      <p class="site-tagline">
+        <span>Development isn't a job,</span>
+        <strong>it's an adventure</strong>
+      </p>
+    </div>
   </footer>
 </body>
 </html>
