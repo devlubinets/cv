@@ -137,6 +137,25 @@ a:focus-visible {
   white-space: nowrap;
 }
 
+.background-list .background-featured {
+  grid-column: 1 / -1;
+  align-items: center;
+  margin-bottom: 0.35rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--accent-surface);
+  font-size: 1.125rem;
+}
+
+.background-featured span {
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--accent);
+  font-weight: 650;
+}
+
 .site-footer {
   flex: 1;
   padding-block: clamp(2.15rem, 4vw, 3.75rem);
